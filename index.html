@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Team XC CONCEPT</title>
-  <!-- Police Anton -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     :root {
-      --pantone-530c: #B9AEDC;     /* Fond principal */
-      --pantone-2617c: #512B62;    /* Texte violet foncé */
-      --pantone-3375c: #47D7AC;    /* Accents menthe */
-      --pantone-663c: #F5F3F5;     /* Blanc/gris clair */
+      --pantone-530c: #B9AEDC;
+      --pantone-2617c: #512B62;
+      --pantone-3375c: #47D7AC;
+      --pantone-663c: #F5F3F5;
     }
     body {
       margin: 0;
       background: var(--pantone-530c);
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
+      font-family: 'Anton', Arial, sans-serif;
       color: var(--pantone-2617c);
     }
     .navbar {
@@ -30,8 +28,7 @@
       justify-content: space-between;
       border-bottom: 2px solid var(--pantone-2617c);
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       z-index: 999;
     }
     .navbar-home {
@@ -53,10 +50,6 @@
       text-transform: uppercase;
       text-decoration: none;
       font-weight: normal;
-      transition: color 0.2s;
-    }
-    .logo:hover {
-      color: var(--pantone-3375c);
     }
     .navbar-links {
       display: flex;
@@ -73,53 +66,45 @@
       background: none;
       border: 2px solid var(--pantone-2617c);
       margin-left: 4px;
-      transition: 
-        color 0.18s,
-        background 0.17s,
-        border 0.19s;
+      transition: color 0.18s, background 0.17s, border 0.19s;
     }
     .navbar-links a:hover {
       color: white;
       background: var(--pantone-3375c);
       border-color: var(--pantone-3375c);
     }
-    /* Mise en forme du contenu principal */
-    .content {
-      padding-top: 90px; /* Pour laisser place à la navbar */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 60vh;
+    .sections-container {
+      padding-top: 76px; /* espace sous navbar */
     }
-    h1 {
+    .section {
+      width: 100vw;
+      height: 33vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-title {
+      width: 100vw;
       font-family: 'Anton', Arial, sans-serif;
-      color: var(--pantone-2617c);
-      font-size: 4vw;
-      font-weight: normal;
-      text-align: center;
+      font-size: 3vw;
       letter-spacing: 0.08em;
-      margin: 0;
       text-transform: uppercase;
+      color: var(--pantone-2617c);
+      text-align: center;
       background: var(--pantone-663c);
-      border-radius: 12px;
-      padding: 30px 55px;
-      box-shadow: 0 0 20px 2px #0002;
+      padding: 22px 0;
+      /* Suppression border-radius, shadow et fond spécial */
+    }
+    .section-photo img {
+      max-width: 80vw;
+      max-height: 28vh;
+      border-radius: 20px;
+      box-shadow: 0 6px 36px #0002;
+      object-fit: cover;
     }
     @media (max-width: 700px) {
-      .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 0 10px;
-        gap: 4px;
-      }
-      .navbar-logo {
-        height: 30px;
-      }
-      h1 {
-        font-size: 2rem;
-        padding: 12px 12px;
-      }
+      .section-title { font-size: 1.2rem; padding: 10px 0; }
+      .section-photo img { max-width: 98vw; max-height: 18vh;}
     }
   </style>
 </head>
@@ -134,8 +119,17 @@
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-  <div class="content">
-    <h1>Team XC CONCEPT</h1>
+
+  <div class="sections-container">
+    <!-- Première section : titre -->
+    <section class="section section-title">
+      Team XC CONCEPT
+    </section>
+    <!-- Deuxième section : photo -->
+    <section class="section section-photo">
+      <img src="photo-accueil.jpg" alt="Team XC CONCEPT" />
+    </section>
+    <!-- Ajoute tes prochaines sections ici -->
   </div>
 </body>
 </html>
