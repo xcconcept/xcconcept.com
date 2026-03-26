@@ -14,8 +14,7 @@
     body {
       margin: 0;
       background: var(--pantone-530c);
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
+      font-family: 'Anton', Arial, sans-serif;
       color: var(--pantone-2617c);
     }
     .navbar {
@@ -43,7 +42,7 @@
       width: auto;
       display: block;
     }
-    .navbar .logo {
+    .logo {
       font-family: 'Anton', Arial, sans-serif;
       color: var(--pantone-2617c);
       font-size: 1.7rem;
@@ -62,75 +61,54 @@
       font-size: 1.1rem;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 8px 0;
+      padding: 8px 18px;
+      border-radius: 25px;
       background: none;
-      border: none;
-      cursor: pointer;
-      transition: color 0.15s;
+      border: 2px solid var(--pantone-2617c);
+      margin-left: 4px;
+      transition: color 0.18s, background 0.17s, border 0.19s;
     }
     .navbar-links a:hover {
-      color: var(--pantone-3375c);
+      color: white;
+      background: var(--pantone-3375c);
+      border-color: var(--pantone-3375c);
     }
-    .content {
-      padding-top: 90px;
-      min-height: 60vh;
+    .container {
+      padding-top: 90px; /* espace sous la navbar */
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-    .side-content {
-      width: 33.3%;
-      min-width: 300px;
-      max-width: 430px;
-      margin-left: 6vw;
-      background: var(--pantone-663c);
-      border-left: 8px solid var(--pantone-3375c);
-      border-radius: 7px;
-      box-shadow: 0 0 10px 1px #0001;
-      padding: 24px 32px 22px 32px;
-      font-size: 1.18rem;
-      color: #191919;
-      text-align: justify;
-      line-height: 1.6;
+      flex-direction: column;
+      align-items: center;
+      min-height: 80vh;
     }
     h1 {
-      position: absolute;
-      left: 6vw;
-      top: 110px;
       font-family: 'Anton', Arial, sans-serif;
-      color: var(--pantone-2617c);
-      font-size: 2.3vw;
+      font-size: 2.3rem;
       text-transform: uppercase;
+      text-align: center;
       letter-spacing: 0.08em;
-      margin-bottom: 24px;
+      color: var(--pantone-2617c);
+      margin-bottom: 32px;
+      margin-top: 24px;
       background: var(--pantone-663c);
-      border-radius: 10px;
-      padding: 12px 35px;
-      box-shadow: 0 0 14px 2px #0002;
+      width: 100%;
+      padding: 20px 0 10px 0;
     }
-    @media (max-width: 900px) {
-      h1 {
-        position: static;
-        left: auto;
-        top: auto;
-        font-size: 1.5rem;
-        margin: 90px auto 10px auto;
-        display: block;
-        padding: 8px 15px;
-        text-align: center;
-      }
-      .content {
-        display: block;
-        padding: 0;
-      }
-      .side-content {
-        margin: 0 auto;
-        width: 92%;
-        min-width: unset;
-        max-width: 98vw;
-        padding: 14px 6vw 22px 6vw;
-        font-size: 1.04rem;
-      }
+    .block-texte {
+      background: var(--pantone-663c);
+      border-left: 8px solid var(--pantone-3375c);
+      border-radius: 10px;
+      box-shadow: 0 0 10px 1px #0001;
+      color: #191919;
+      padding: 26px 36px;
+      font-size: 1.18rem;
+      line-height: 1.6;
+      max-width: 600px;
+      width: 95vw;
+      text-align: justify;
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 1.18rem; margin-top: 16px; padding: 10px 0 7px 0;}
+      .block-texte { font-size: 1.03rem; padding: 14px 7vw; }
     }
   </style>
 </head>
@@ -145,9 +123,9 @@
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-  <h1>Qui sommes-nous ?</h1>
-  <div class="content">
-    <div class="side-content">
+  <div class="container">
+    <h1>Qui sommes-nous&nbsp;?</h1>
+    <div class="block-texte">
       XC CONCEPT, team VTT XCO/XCE, c’est une équipe soudée qui avance vite, sur le vélo comme en dehors. Retrouvez-nous sur les circuits régionaux et nationaux (Coupes de France VTT XCO/XCE, Championnats de France VTT, Coupes AURA XCO/XCE, Enduro) avec une vraie envie de performer.<br><br>
       Avec des valeurs prônant confiance, cohésion et plaisir de rouler ensemble, la saison s’annonce intense !
     </div>
