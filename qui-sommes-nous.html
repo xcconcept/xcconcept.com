@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Qui sommes-nous – XC CONCEPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pantone-530c: #B9AEDC;
+      --pantone-2617c: #512B62;
+      --pantone-3375c: #47D7AC;
+      --pantone-663c: #F5F3F5;
+    }
+    body {
+      margin: 0;
+      background: var(--pantone-530c);
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: var(--pantone-2617c);
+    }
+    .navbar {
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 0 40px;
+      height: 64px;
+      background: var(--pantone-663c);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--pantone-2617c);
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 999;
+    }
+    .navbar-home {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+    }
+    .navbar-logo {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+    .navbar .logo {
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      font-size: 1.7rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .navbar-links {
+      display: flex;
+      gap: 32px;
+    }
+    .navbar-links a {
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 8px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .navbar-links a:hover {
+      color: var(--pantone-3375c);
+    }
+    .content {
+      padding-top: 90px;
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .side-content {
+      width: 33.3%;
+      min-width: 300px;
+      max-width: 430px;
+      margin-left: 6vw;
+      background: var(--pantone-663c);
+      border-left: 8px solid var(--pantone-3375c);
+      border-radius: 7px;
+      box-shadow: 0 0 10px 1px #0001;
+      padding: 24px 32px 22px 32px;
+      font-size: 1.18rem;
+      color: #191919;
+      text-align: justify;
+      line-height: 1.6;
+    }
+    h1 {
+      position: absolute;
+      left: 6vw;
+      top: 110px;
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      font-size: 2.3vw;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+      background: var(--pantone-663c);
+      border-radius: 10px;
+      padding: 12px 35px;
+      box-shadow: 0 0 14px 2px #0002;
+    }
+    @media (max-width: 900px) {
+      h1 {
+        position: static;
+        left: auto;
+        top: auto;
+        font-size: 1.5rem;
+        margin: 90px auto 10px auto;
+        display: block;
+        padding: 8px 15px;
+        text-align: center;
+      }
+      .content {
+        display: block;
+        padding: 0;
+      }
+      .side-content {
+        margin: 0 auto;
+        width: 92%;
+        min-width: unset;
+        max-width: 98vw;
+        padding: 14px 6vw 22px 6vw;
+        font-size: 1.04rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-home">
+      <img src="logo-xcconcept.png" alt="Logo XC Concept" class="navbar-logo">
+      <span class="logo">XC CONCEPT</span>
+    </a>
+    <div class="navbar-links">
+      <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <h1>Qui sommes-nous ?</h1>
+  <div class="content">
+    <div class="side-content">
+      XC CONCEPT, team VTT XCO/XCE, c’est une équipe soudée qui avance vite, sur le vélo comme en dehors. Retrouvez-nous sur les circuits régionaux et nationaux (Coupes de France VTT XCO/XCE, Championnats de France VTT, Coupes AURA XCO/XCE, Enduro) avec une vraie envie de performer.<br><br>
+      Avec des valeurs prônant confiance, cohésion et plaisir de rouler ensemble, la saison s’annonce intense !
+    </div>
+  </div>
+</body>
+</html>
