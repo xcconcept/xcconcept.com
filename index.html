@@ -3,26 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Team XC CONCEPT</title>
-  <!-- Lien vers Google Fonts Anton -->
+  <!-- Police Anton -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #fafafa;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    h1 {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #111;
-      font-size: 4vw;
-      font-weight: normal;
-      text-align: center;
-      letter-spacing: 0.08em;
-      margin: 0;
-      text-transform: uppercase;
+    :root {
+      --pantone-530c: #B9AEDC;     /* Fond principal */
+      --pantone-2617c: #512B62;    /* Texte violet foncé */
+      --pantone-3375c: #47D7AC;    /* Accents menthe */
+      --pantone-663c: #F5F3F5;     /* Blanc/gris clair */
     }
     body {
       margin: 0;
@@ -42,7 +30,8 @@
       justify-content: space-between;
       border-bottom: 2px solid var(--pantone-2617c);
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       z-index: 999;
     }
     .navbar-home {
@@ -56,7 +45,7 @@
       width: auto;
       display: block;
     }
-    .navbar .logo {
+    .logo {
       font-family: 'Anton', Arial, sans-serif;
       color: var(--pantone-2617c);
       font-size: 1.7rem;
@@ -64,6 +53,10 @@
       text-transform: uppercase;
       text-decoration: none;
       font-weight: normal;
+      transition: color 0.2s;
+    }
+    .logo:hover {
+      color: var(--pantone-3375c);
     }
     .navbar-links {
       display: flex;
@@ -75,80 +68,74 @@
       font-size: 1.1rem;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 8px 0;
+      padding: 8px 18px;
+      border-radius: 25px;
       background: none;
-      border: none;
-      cursor: pointer;
-      transition: color 0.15s;
+      border: 2px solid var(--pantone-2617c);
+      margin-left: 4px;
+      transition: 
+        color 0.18s,
+        background 0.17s,
+        border 0.19s;
     }
     .navbar-links a:hover {
-      color: var(--pantone-3375c);
+      color: white;
+      background: var(--pantone-3375c);
+      border-color: var(--pantone-3375c);
     }
+    /* Mise en forme du contenu principal */
     .content {
-      padding-top: 90px;
-      min-height: 60vh;
+      padding-top: 90px; /* Pour laisser place à la navbar */
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
     }
-    .side-content {
-      width: 33.3%;
-      min-width: 300px;
-      max-width: 430px;
-      margin-left: 6vw;
-      background: var(--pantone-663c);
-      border-left: 8px solid var(--pantone-3375c);
-      border-radius: 7px;
-      box-shadow: 0 0 10px 1px #0001;
-      padding: 24px 32px 22px 32px;
-      font-size: 1.18rem;
-      color: #191919;
-      text-align: justify;
-      line-height: 1.6;
-    }
-    h2 {
-      position: absolute;
-      left: 6vw;
-      top: 110px;
+    h1 {
       font-family: 'Anton', Arial, sans-serif;
       color: var(--pantone-2617c);
-      font-size: 2.3vw;
-      text-transform: uppercase;
+      font-size: 4vw;
+      font-weight: normal;
+      text-align: center;
       letter-spacing: 0.08em;
-      margin-bottom: 24px;
+      margin: 0;
+      text-transform: uppercase;
       background: var(--pantone-663c);
-      border-radius: 10px;
-      padding: 12px 35px;
-      box-shadow: 0 0 14px 2px #0002;
+      border-radius: 12px;
+      padding: 30px 55px;
+      box-shadow: 0 0 20px 2px #0002;
     }
-    @media (max-width: 900px) {
-      h2 {
-        position: static;
-        left: auto;
-        top: auto;
-        font-size: 1.5rem;
-        margin: 90px auto 10px auto;
-        display: block;
-        padding: 8px 15px;
-        text-align: center;
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 0 10px;
+        gap: 4px;
       }
-      .content {
-        display: block;
-        padding: 0;
+      .navbar-logo {
+        height: 30px;
       }
-      .side-content {
-        margin: 0 auto;
-        width: 92%;
-        min-width: unset;
-        max-width: 98vw;
-        padding: 14px 6vw 22px 6vw;
-        font-size: 1.04rem;
+      h1 {
+        font-size: 2rem;
+        padding: 12px 12px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Team XC CONCEPT</h1>
-  <h2>Qui sommes-nous</h2>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-home">
+      <img src="logo-xcconcept.png" alt="Logo XC Concept" class="navbar-logo">
+      <span class="logo">XC CONCEPT</span>
+    </a>
+    <div class="navbar-links">
+      <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <div class="content">
+    <h1>Team XC CONCEPT</h1>
+  </div>
 </body>
 </html>
