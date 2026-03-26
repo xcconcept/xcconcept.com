@@ -102,9 +102,63 @@
       box-shadow: 0 6px 36px #0002;
       object-fit: cover;
     }
+    /* FOOTER CONTACT */
+    .footer-contact {
+      width: 100vw;
+      background: var(--pantone-663c);
+      color: var(--pantone-2617c);
+      border-top: 2px solid var(--pantone-3375c);
+      padding: 28px 0 19px 0;
+      margin-top: 60px;
+      font-family: 'Anton', Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    .footer-title {
+      font-family: 'Anton', Arial, sans-serif;
+      font-size: 1.42rem;
+      font-weight: bold;
+      letter-spacing: 0.07em;
+      text-align: center;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .footer-columns {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .footer-col {
+      min-width: 230px;
+      max-width: 380px;
+      text-align: center;
+      font-size: 1.12rem;
+      margin: 6px 0;
+    }
+    .footer-label {
+      font-family: 'Anton', Arial, sans-serif;
+      font-weight: bold;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      color: var(--pantone-3375c);
+      font-size: 1.06rem;
+    }
+    .footer-col a {
+      color: var(--pantone-2617c);
+      text-decoration: underline;
+      word-break: break-all;
+      font-family: 'Anton', Arial, sans-serif;
+    }
+    .footer-col a:hover {
+      color: var(--pantone-3375c);
+    }
     @media (max-width: 700px) {
       .section-title { font-size: 1.2rem; padding: 10px 0; }
       .section-photo img { max-width: 98vw; max-height: 18vh;}
+      .footer-columns { flex-direction: column; gap: 18px; }
+      .footer-contact { font-size: 0.96rem; padding: 18px 0 8px 0; }
     }
   </style>
 </head>
@@ -121,15 +175,26 @@
   </nav>
 
   <div class="sections-container">
-    <!-- Première section : titre -->
     <section class="section section-title">
       Team XC CONCEPT
     </section>
-    <!-- Deuxième section : photo -->
     <section class="section section-photo">
       <img src="photo-accueil.jpg" alt="Team XC CONCEPT" />
     </section>
-    <!-- Ajoute tes prochaines sections ici -->
   </div>
+
+  <footer class="footer-contact">
+    <div class="footer-title">CONTACT</div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <div class="footer-label">Adresse</div>
+        24 impasse de la Muscadière<br>63119 Châteaugay, France
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">Email</div>
+        <a href="mailto:bureau@xcconcept.com">bureau@xcconcept.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
