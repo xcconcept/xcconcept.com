@@ -1,25 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">  <!-- Assurez-vous que le fichier style.css existe -->
-    <style>
-        body {
-            text-align: center;
-        }
-        h1 {
-            font-family: 'Anton', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Contact – XC CONCEPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pantone-530c: #B9AEDC;
+      --pantone-2617c: #512B62;
+      --pantone-3375c: #47D7AC;
+      --pantone-663c: #F5F3F5;
+    }
+    body {
+      margin: 0;
+      background: var(--pantone-530c);
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      box-sizing: border-box;
+    }
+    .navbar {
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 0 40px;
+      height: 64px;
+      background: var(--pantone-663c);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--pantone-2617c);
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 999;
+    }
+    .navbar-home {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+    }
+    .navbar-logo {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+    .logo {
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      font-size: 1.7rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .navbar-links {
+      display: flex;
+      gap: 32px;
+    }
+    .navbar-links a {
+      font-family: 'Anton', Arial, sans-serif;
+      color: var(--pantone-2617c);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      background: none;
+      border: 2px solid var(--pantone-2617c);
+      margin-left: 4px;
+      transition: color 0.18s, background 0.17s, border 0.19s;
+    }
+    .navbar-links a:hover {
+      color: white;
+      background: var(--pantone-3375c);
+      border-color: var(--pantone-3375c);
+    }
+    .content-contact {
+      padding-top: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 70vh;
+    }
+    h1 {
+      font-family: 'Anton', Arial, sans-serif;
+      font-size: 2.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pantone-2617c);
+      text-align: center;
+      margin-bottom: 22px;
+      background: var(--pantone-663c);
+      width: 100%;
+      padding: 18px 0 8px 0;
+    }
+    .contact-block {
+      background: var(--pantone-663c);
+      border-radius: 15px;
+      box-shadow: 0 6px 36px #0002;
+      padding: 32px 36px;
+      font-size: 1.25rem;
+      color: var(--pantone-2617c);
+      font-family: 'Anton', Arial, sans-serif;
+      text-align: center;
+      margin: 16px 0;
+      max-width: 420px;
+    }
+    .contact-block a {
+      color: var(--pantone-3375c);
+      text-decoration: underline;
+      font-family: 'Anton', Arial, sans-serif;
+      word-break: break-all;
+    }
+    .contact-block a:hover {
+      color: var(--pantone-2617c);
+    }
+    @media (max-width: 700px) {
+      .logo        { font-size: 1.18rem; }
+      h1           { font-size: 1.12rem; padding: 13px 0; }
+      .contact-block { font-size: 1rem; padding: 18px 7px; }
+      .navbar      { flex-direction: column; height: auto; gap: 4px; padding: 0 10px;}
+      .navbar-logo { height: 30px;}
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <!-- Bandeau de navigation à inclure ici, copié depuis index.html -->
-    </nav>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-home">
+      <img src="logo-xcconcept.png" alt="Logo XC Concept" class="navbar-logo">
+      <span class="logo">XC CONCEPT</span>
+    </a>
+    <div class="navbar-links">
+      <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <div class="content-contact">
     <h1>Contact</h1>
-    <p>Pour nous contacter, écrivez-nous à <a href="mailto:bureau@xcconcept.com">bureau@xcconcept.com</a>.</p>
+    <div class="contact-block">
+      Pour nous contacter, écrivez-nous à<br>
+      <a href="mailto:bureau@xcconcept.com">bureau@xcconcept.com</a>
+    </div>
+  </div>
 </body>
 </html>
